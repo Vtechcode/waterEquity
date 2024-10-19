@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ValveDetails">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading2"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Valve"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/WaterLevel"
+        android:text="Water Level (m3):"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/heading2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/waterVal"
+        app:layout_constraintTop_toBottomOf="@id/heading2"
+        app:layout_constraintLeft_toRightOf="@id/WaterLevel"
+        android:hint="water level"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressuresLevel"
+        android:text="PressureLevel(N/m2):"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/WaterLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressureVal"
+        app:layout_constraintTop_toBottomOf="@id/waterVal"
+        app:layout_constraintLeft_toRightOf="@id/WaterLevel"
+        android:hint="Pressure level"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setVolume"
+        android:text="Set Volume (m3):"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/pressuresLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/setVal"
+        app:layout_constraintTop_toBottomOf="@id/pressureVal"
+        app:layout_constraintLeft_toRightOf="@id/setVolume"
+        android:hint=" Set Volume"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setBill"
+        android:text="Bill:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/setVolume"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/billVal"
+        app:layout_constraintTop_toBottomOf="@id/setVal"
+        app:layout_constraintLeft_toRightOf="@id/setVolume"
+        android:hint="Bill Amount"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:text="Open"
+    android:id="@+id/open"
+    app:layout_constraintTop_toBottomOf="@id/setBill"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Close"
+        android:id="@+id/close"
+        app:layout_constraintTop_toBottomOf="@id/billVal"
+        app:layout_constraintLeft_toRightOf="@id/open"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"/>
+
+    <ImageView
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/graph" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

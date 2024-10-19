@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Heading"
+        android:id="@+id/heading"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Valve1"
+        android:id="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Valve2"
+        android:id="@+id/v2"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintLeft_toRightOf="@id/v1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"/>
+
+    <Button
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:text="Valve3"
+    android:id="@+id/v3"
+    app:layout_constraintTop_toBottomOf="@id/v1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="50dp"/>
+
+    <Button
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:text="Valve4"
+    android:id="@+id/v4"
+    app:layout_constraintTop_toBottomOf="@id/v2"
+    app:layout_constraintLeft_toRightOf="@id/v3"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="100dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Network Page"
+        android:id="@+id/NetPage"
+        app:layout_constraintTop_toBottomOf="@id/v3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
